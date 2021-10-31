@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 6</title>
+</head>
+<body>
+    <h3>Chọn giới tính của bạn</h3>
+    <input type="radio" value="Nam" name="gioitinh"> Nam
+    <input type="radio" value="Nữ" name="gioitinh"> Nữ <br>
+    <input type="button" value="Hiển thị" id="btnhienthi"">
+    <script>
+        document.getElementById("btnhienthi").onclick = function()
+        {    
+            var radioButton = document.getElementsByName("gioitinh");
+            for(var i=0;i< radioButton.length; i++)
+            {
+                if(radioButton[i].checked === true){
+                    alert(radioButton[i].value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

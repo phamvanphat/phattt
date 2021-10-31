@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 10</title>
+    <style>
+        body{
+            height: 1000px;
+        }
+        .popup{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .popup img{
+            border: 2px solid #03f;
+        }
+        .popup a{
+            display: block;
+            width: 150px;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+            font-size: 15px;
+            background-color: rgb(34, 78, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <a href="#" id="an" onclick="tatquangcao()">Tắt quảng cáo [X]</a>
+        <img src="https://ootbmarket.com/Images/Blog/popup.png" id="quangcao">
+        <a href="#" id="hien" onclick="hienquangcao()" style="display: none;" >Hiện quảng cáo...</a>
+    </div>
+    <script>
+        function tatquangcao()   
+        {
+            document.getElementById("an").style.display="none";
+            document.getElementById("quangcao").style.display="none";
+            document.getElementById("hien").style.display="block";
+        }
+        function hienquangcao()
+        {
+            document.getElementById("an").style.display="block";
+            document.getElementById("quangcao").style.display="block";
+            document.getElementById("hien").style.display="none";
+        }
+    </script>
+</body>
+</html>

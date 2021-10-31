@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><hr><br>
+    <div style="align-items: baseline;">
+        <button id="addNum">+</button>
+        <input type="text" style="width: 30px; border: none; text-align: center;" placeholder="" id="NumberVal">
+        <button id="subNum">-</button>
+    </div>
+    <script>
+        var addbtn = document.querySelector("#addNum");
+        var subbtn = document.querySelector("#subNum");
+        var numVal = document.querySelector("#NumberVal");
+        numVal.value = 10;
+        addbtn.onclick = function(){
+        var giatri = Number(numVal.value);
+        numVal.value = ++giatri;
+}
+        subbtn.onclick = function(){
+        var giatri = Number(numVal.value);
+        numVal.value = --giatri;
+}
+
+    </script>
+</body>
+</html>
